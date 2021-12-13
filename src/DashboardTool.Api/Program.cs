@@ -1,17 +1,26 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using DashboardTool.WidgetService.IoC;
+using DashboardTool.WidgetService.Repository.Migration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(containerIoC =>
+    containerIoC.RegisterModule(new WidgetServiceIoCModule())
+);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
+app.MigrateDatabaseWidgetService();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -4,12 +4,23 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Version>0.0.1</Version>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Endpoints" />
-      <Folder Include="Repository" />
       <Folder Include="Services" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Repository\Scripts\Script0001_InitDatabase.sql" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DashboardTool.Infrastructure\DashboardTool.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Repository\Migration\SqlScripts\Script0001_InitDatabase.sql" />
     </ItemGroup>
 
 </Project>

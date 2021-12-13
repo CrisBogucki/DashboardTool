@@ -6,4 +6,23 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Autofac" Version="6.3.0" />
+      <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
+      <PackageReference Include="Dapper" Version="2.0.123" />
+      <PackageReference Include="dbup-sqlserver" Version="4.5.0" />
+      <PackageReference Include="MediatR" Version="9.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DashboardTool.Common\DashboardTool.Common.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="IoC" />
+    </ItemGroup>
+
 </Project>
