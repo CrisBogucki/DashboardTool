@@ -17,6 +17,12 @@
 
     <ItemGroup>
       <EmbeddedResource Include="Repository\Migration\SqlScripts\Script0001_InitDatabase.sql" />
+      <EmbeddedResource Include="Repository\Migration\SqlScripts\Script0002_InitDatabase.sql" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Repository\Entity" />
+      <Folder Include="Services\Query" />
     </ItemGroup>
 
 </Project>
