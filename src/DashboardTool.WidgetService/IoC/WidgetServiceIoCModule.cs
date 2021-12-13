@@ -1,6 +1,8 @@
+using System;
 using System.Reflection;
 using Autofac;
 using MediatR;
+
 
 namespace DashboardTool.WidgetService.IoC
 {
@@ -10,7 +12,7 @@ namespace DashboardTool.WidgetService.IoC
         {
             builder.RegisterAssemblyTypes(typeof(IMediator).GetTypeInfo().Assembly).AsImplementedInterfaces();
 
-            var mediateOpenTypes = new[]
+            Type[] mediateOpenTypes = new[]
             {
                 typeof(IRequestHandler<,>),
                 typeof(INotificationHandler<>)

@@ -21,8 +21,4 @@
       <ProjectReference Include="..\DashboardTool.Common\DashboardTool.Common.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="IoC" />
-    </ItemGroup>
-
 </Project>
