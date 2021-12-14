@@ -1,5 +1,4 @@
 using System.Reflection;
-using Autofac;
 using DashboardTool.Common.Utils;
 using DbUp;
 using Microsoft.Extensions.DependencyInjection;

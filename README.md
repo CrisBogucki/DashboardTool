@@ -1,9 +1,9 @@
 # Dashboard Tool API
 
-     Architecture and project .NET Core Web API Best Practices
+ Architecture and project .NET Core Web API Best Practices
 
-     Description of what the proposed architecture of the 
-     microservice example solution should include 
+ Description of what the proposed architecture of the 
+ microservice example solution should include 
 
    - [x] Startup Class and the Service Configuration
    - [x] Project Organization
