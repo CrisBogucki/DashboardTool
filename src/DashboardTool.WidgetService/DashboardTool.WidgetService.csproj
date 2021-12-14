@@ -22,7 +22,6 @@
 
     <ItemGroup>
       <Folder Include="Repository\Entity" />
-      <Folder Include="Services\Query" />
     </ItemGroup>
 
 </Project>

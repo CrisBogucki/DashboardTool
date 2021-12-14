@@ -6,7 +6,7 @@ using MediatR;
 
 namespace DashboardTool.WidgetService.IoC
 {
-    public class WidgetServiceIoCModule : Autofac.Module
+    public class WidgetServiceModule : Autofac.Module
     {
         protected override void Load(ContainerBuilder builder)
         {
